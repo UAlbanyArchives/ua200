@@ -1,0 +1,1024 @@
+***********************************************************************************
+2016-07-01 16:53:59
+0.061999797821 seconds
+0.00103332996368 minutes
+1.72221660614e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 177, in <module>
+    createSIP = Popen(sipCmd, shell=True, stdout=PIPE, stderr=PIPE)
+NameError: name 'Popen' is not defined
+***********************************************************************************
+2016-07-01 16:58:49
+253.780999899 seconds
+4.22968333165 minutes
+0.0704947221941 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 179, in <module>
+    createSIP = Popen(sipCmd, shell=True, stdout=PIPE, stderr=PIPE)
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-01 16:59:56
+6.60000014305 seconds
+0.110000002384 minutes
+0.00183333337307 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 180, in <module>
+    stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nManages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\n")
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-01 17:00:48
+2.88400006294 seconds
+0.0480666677157 minutes
+0.000801111128595 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 180, in <module>
+    stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nManages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\n")
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-01 17:01:13
+2.26900005341 seconds
+0.0378166675568 minutes
+0.000630277792613 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 181, in <module>
+    stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nManages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\n")
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-01 17:01:45
+2.41799998283 seconds
+0.0402999997139 minutes
+0.000671666661898 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 181, in <module>
+    stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nManages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\n")
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-01 17:02:34
+0.0469999313354 seconds
+0.000783332188924 minutes
+1.30555364821e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 123, in <module>
+    seriesLogBook = Workbook()
+NameError: name 'Workbook' is not defined
+***********************************************************************************
+2016-07-01 17:03:17
+0.0939998626709 seconds
+0.00156666437785 minutes
+2.61110729641e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 137, in <module>
+    hashIndex = simplejson.loads(hashFile.read())
+  File "C:\Python27\lib\site-packages\simplejson\__init__.py", line 516, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\lib\site-packages\simplejson\decoder.py", line 370, in decode
+    obj, end = self.raw_decode(s)
+  File "C:\Python27\lib\site-packages\simplejson\decoder.py", line 400, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+  File "C:\Python27\lib\site-packages\simplejson\scanner.py", line 127, in scan_once
+    return _scan_once(string, idx)
+  File "C:\Python27\lib\site-packages\simplejson\scanner.py", line 87, in _scan_once
+    raise JSONDecodeError(errmsg, string, idx)
+JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+***********************************************************************************
+2016-07-01 17:04:21
+0.134000062943 seconds
+0.00223333438238 minutes
+3.72222397063e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 145, in <module>
+    hash = str(md5(file))
+  File "ua200.py", line 57, in md5
+    with open(fname, "rb") as f:
+IOError: [Errno 2] No such file or directory: 'UFS Bylaws.doc'
+***********************************************************************************
+2016-07-05 13:42:31
+0.259000062943 seconds
+0.00431666771571 minutes
+7.19444619285e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 145, in <module>
+    hash = str(md5(file))
+  File "ua200.py", line 57, in md5
+    with open(fname, "rb") as f:
+IOError: [Errno 2] No such file or directory: 'UFS Bylaws.doc'
+***********************************************************************************
+2016-07-05 13:45:42
+0.156000137329 seconds
+0.00260000228882 minutes
+4.33333714803e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 154, in <module>
+    fileCount = fileCount + 1
+NameError: name 'fileCount' is not defined
+***********************************************************************************
+2016-07-05 13:46:02
+0.0930001735687 seconds
+0.00155000289281 minutes
+2.58333815469e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 154, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder))
+NameError: name 'shutil' is not defined
+***********************************************************************************
+2016-07-05 13:46:21
+3.30900001526 seconds
+0.0551500002543 minutes
+0.000919166670905 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 155, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder))
+  File "C:\Python27\lib\shutil.py", line 292, in move
+    raise Error, "Destination path '%s' already exists" % real_dst
+Error: Destination path '\\romeo\Collect\spe\Greg\ua200_testing\Requests\Bylaws, Charters, and Senate Handbooks\CAAS.doc' already exists
+***********************************************************************************
+2016-07-05 13:49:19
+0.335000038147 seconds
+0.00558333396912 minutes
+9.30555661519e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 156, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder))
+  File "C:\Python27\lib\shutil.py", line 292, in move
+    raise Error, "Destination path '%s' already exists" % real_dst
+Error: Destination path '\\romeo\Collect\spe\Greg\ua200_testing\Requests\Bylaws, Charters, and Senate Handbooks\CAAS.doc' already exists
+***********************************************************************************
+2016-07-05 13:51:09
+0.248999834061 seconds
+0.00414999723434 minutes
+6.91666205724e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 159, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder))
+  File "C:\Python27\lib\shutil.py", line 292, in move
+    raise Error, "Destination path '%s' already exists" % real_dst
+Error: Destination path '\\romeo\Collect\spe\Greg\ua200_testing\Requests\Bylaws, Charters, and Senate Handbooks\CAAS.doc' already exists
+***********************************************************************************
+2016-07-05 13:53:05
+3.90199995041 seconds
+0.0650333325068 minutes
+0.00108388887511 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 169, in <module>
+    seriesLogBook.save(accessionFile)
+NameError: name 'accessionFile' is not defined
+***********************************************************************************
+2016-07-05 13:58:46
+0.110000133514 seconds
+0.00183333555857 minutes
+3.05555926429e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 161, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder, subPath))
+  File "C:\Python27\lib\shutil.py", line 292, in move
+    raise Error, "Destination path '%s' already exists" % real_dst
+Error: Destination path '\\romeo\Collect\2009-10 Bylaws\UFS Bylaws.doc\UFS Bylaws.doc' already exists
+***********************************************************************************
+2016-07-05 14:04:48
+0.118000030518 seconds
+0.00196666717529 minutes
+3.27777862549e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 161, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder, subPath))
+  File "C:\Python27\lib\shutil.py", line 292, in move
+    raise Error, "Destination path '%s' already exists" % real_dst
+Error: Destination path '\\romeo\Collect\2009-10 Bylaws\UFS Bylaws.doc' already exists
+***********************************************************************************
+2016-07-05 14:07:26
+0.0310001373291 seconds
+0.000516668955485 minutes
+8.61114925808e-06 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 137, in <module>
+    newIndex = open(os.path.join(hashDir, folder + "Hash.json"), "w")
+IOError: [Errno 2] No such file or directory: '\\\\LINCOLN\\Masters\\Special Collections\\accessions\\hashDir\\ua200Hash\\Bylaws, Charters, and Senate HandbooksHash.json'
+***********************************************************************************
+2016-07-05 14:08:57
+7.68899989128 seconds
+0.128149998188 minutes
+0.00213583330313 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 90, in <module>
+    newIndex = open(os.path.join(hashDir, folder, subfolder + "Hash.json"), "w")
+IOError: [Errno 2] No such file or directory: '\\\\LINCOLN\\Masters\\Special Collections\\accessions\\hashDir\\ua200Hash\\Councils\\2010-11 Ad Hoc Revenue CommitteeHash.json'
+***********************************************************************************
+2016-07-05 14:12:04
+1.97099995613 seconds
+0.0328499992688 minutes
+0.000547499987814 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 162, in <module>
+    os.makedirs(os.path.join(triageDir, "Requests", folder, subPath))
+  File "C:\Python27\lib\os.py", line 150, in makedirs
+    makedirs(head, mode)
+  File "C:\Python27\lib\os.py", line 157, in makedirs
+    mkdir(name, mode)
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:14:14
+1.57899999619 seconds
+0.0263166666031 minutes
+0.000438611110051 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 157, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:16:19
+0.539000034332 seconds
+0.00898333390554 minutes
+0.000149722231759 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 159, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:17:20
+0.97000002861 seconds
+0.0161666671435 minutes
+0.000269444452392 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 156, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:19:06
+0.414999961853 seconds
+0.00691666603088 minutes
+0.000115277767181 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 157, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:20:04
+0.571000099182 seconds
+0.0095166683197 minutes
+0.000158611138662 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 157, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:21:00
+0.125 seconds
+0.00208333333333 minutes
+3.47222222222e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 152, in <module>
+    if subPath.startswith("/"):
+NameError: name 'subPath' is not defined
+***********************************************************************************
+2016-07-05 14:21:43
+0.648999929428 seconds
+0.0108166654905 minutes
+0.000180277758174 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 158, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:22:44
+0.384000062943 seconds
+0.00640000104904 minutes
+0.000106666684151 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 161, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:23:59
+0.296000003815 seconds
+0.00493333339691 minutes
+8.22222232819e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 159, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:24:46
+0.297999858856 seconds
+0.00496666431427 minutes
+8.27777385712e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 147, in <module>
+    for series, paths, files in os.walk(os.path.join(triageDir, folder)):
+  File "C:\Python27\lib\os.py", line 296, in walk
+    for x in walk(new_path, topdown, onerror, followlinks):
+  File "C:\Python27\lib\os.py", line 296, in walk
+    for x in walk(new_path, topdown, onerror, followlinks):
+  File "C:\Python27\lib\os.py", line 286, in walk
+    if isdir(join(top, name)):
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:25:13
+0.369000196457 seconds
+0.00615000327428 minutes
+0.000102500054571 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 147, in <module>
+    for series, paths, files in os.walk(os.path.join(triageDir, folder)):
+  File "C:\Python27\lib\os.py", line 296, in walk
+    for x in walk(new_path, topdown, onerror, followlinks):
+  File "C:\Python27\lib\os.py", line 296, in walk
+    for x in walk(new_path, topdown, onerror, followlinks):
+  File "C:\Python27\lib\os.py", line 286, in walk
+    if isdir(join(top, name)):
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:28:24
+6.94400000572 seconds
+0.115733333429 minutes
+0.00192888889048 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 90, in <module>
+    newIndex = open(os.path.join(hashDir, folder, subfolder + "Hash.json"), "w")
+IOError: [Errno 2] No such file or directory: '\\\\LINCOLN\\Masters\\Special Collections\\accessions\\hashDir\\ua200Hash\\Councils\\2010-11 Ad Hoc Revenue CommitteeHash.json'
+***********************************************************************************
+2016-07-05 14:41:01
+6.6850001812 seconds
+0.111416669687 minutes
+0.00185694449478 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 110, in <module>
+    hash = str(md5(file))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+IOError: [Errno 2] No such file or directory: 'Ad Hoc Revenue Committee.doc'
+***********************************************************************************
+2016-07-05 14:44:29
+1.375 seconds
+0.0229166666667 minutes
+0.000381944444444 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 166, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 62, in md5
+    hash_md5.update(chunk)
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 14:45:39
+6.3900001049 seconds
+0.106500001748 minutes
+0.00177500002914 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 118, in <module>
+    fileCount = fileCount + 1
+NameError: name 'fileCount' is not defined
+***********************************************************************************
+2016-07-05 14:47:15
+6.28699994087 seconds
+0.104783332348 minutes
+0.00174638887246 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 118, in <module>
+    shutil.move(file, os.path.join(triageDir, "Requests", folder, subfolder, subPath))
+  File "C:\Python27\lib\shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "C:\Python27\lib\shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "C:\Python27\lib\shutil.py", line 82, in copyfile
+    with open(src, 'rb') as fsrc:
+IOError: [Errno 2] No such file or directory: 'Ad Hoc Revenue Committee.doc'
+***********************************************************************************
+2016-07-05 14:51:29
+7.625 seconds
+0.127083333333 minutes
+0.00211805555556 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 128, in <module>
+    seriesLogBook.save(accessionFile)
+  File "C:\Python27\lib\site-packages\openpyxl\workbook\workbook.py", line 263, in save
+    save_workbook(self, filename)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 239, in save_workbook
+    writer.save(filename, as_template=as_template)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 221, in save
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "C:\Python27\lib\zipfile.py", line 778, in __init__
+    self.fp = io.open(file, filemode)
+IOError: [Errno 2] No such file or directory: '\\\\romeo\\Collect\\spe\\Greg\\ua200_testing\\Logs\\Councils\\2010-11 Ad Hoc Revenue Committee.xlsx'
+***********************************************************************************
+2016-07-05 14:55:37
+160.032000065 seconds
+2.66720000108 minutes
+0.0444533333513 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 183, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder, subPath))
+  File "C:\Python27\lib\shutil.py", line 292, in move
+    raise Error, "Destination path '%s' already exists" % real_dst
+Error: Destination path '\\romeo\Collect\spe\Greg\ua200_testing\Requests\Elections\University Senate Call for Volunteers.msg' already exists
+***********************************************************************************
+2016-07-05 15:01:39
+1.28999996185 seconds
+0.0214999993642 minutes
+0.000358333322737 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 184, in <module>
+    if not os.path.isdir(os.path.join(triageDir, "Requests", folder, subPath)):
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 15:02:09
+1.12700009346 seconds
+0.018783334891 minutes
+0.000313055581517 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 180, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 15:03:53
+0.496999979019 seconds
+0.00828333298365 minutes
+0.000138055549728 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 174, in <module>
+    hash = str(md5(filePath))
+  File "ua200.py", line 60, in md5
+    with open(fname, "rb") as f:
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 15:06:54
+0.253999948502 seconds
+0.00423333247503 minutes
+7.05555412504e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 174, in <module>
+    if subPath.startswith("/"):
+AttributeError: 'list' object has no attribute 'startswith'
+***********************************************************************************
+2016-07-05 15:08:16
+0.476999998093 seconds
+0.00794999996821 minutes
+0.00013249999947 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 185, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder, subPath))
+  File "C:\Python27\lib\shutil.py", line 294, in move
+    os.rename(src, real_dst)
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 15:08:56
+0.311999797821 seconds
+0.00519999663035 minutes
+8.66666105058e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 186, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder, subPath))
+  File "C:\Python27\lib\shutil.py", line 294, in move
+    os.rename(src, real_dst)
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 15:13:10
+125.835000038 seconds
+2.09725000064 minutes
+0.0349541666773 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 224, in <module>
+    if len(stdout) > 0:
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 15:27:29
+61.1449999809 seconds
+1.01908333302 minutes
+0.0169847222169 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 189, in <module>
+    seriesLog.append([subPath, filename, aquTimeReadable, hash, aquTime])
+  File "C:\Python27\lib\site-packages\openpyxl\worksheet\worksheet.py", line 686, in append
+    cell = Cell(self, row=row_idx, col_idx=col_idx, value=content)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 113, in __init__
+    self.value = value
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 305, in value
+    self._bind_value(value)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 199, in _bind_value
+    value = self.check_string(value)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 149, in check_string
+    value = unicode(value, self.encoding)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-05 15:33:21
+55.1330001354 seconds
+0.91888333559 minutes
+0.0153147222598 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 121, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "Requests", folder, subfolder, subPath))
+  File "C:\Python27\lib\shutil.py", line 302, in move
+    copy2(src, real_dst)
+  File "C:\Python27\lib\shutil.py", line 130, in copy2
+    copyfile(src, dst)
+  File "C:\Python27\lib\shutil.py", line 83, in copyfile
+    with open(dst, 'wb') as fdst:
+IOError: [Errno 2] No such file or directory: '\\\\romeo\\Collect\\spe\\Greg\\ua200_testing\\Requests\\Councils\\Libraries, Information Systems, and Computing (LISC)\\Libraries, Information Systems, and Computing (LISC)\\Libraries, Information Systems, and Computing (LISC)\\2009-10 LISC\\LISC agendaMeeting December 7.doc'
+***********************************************************************************
+2016-07-05 16:16:31
+0.171000003815 seconds
+0.00285000006358 minutes
+4.75000010596e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 108, in <module>
+    print subPath
+NameError: name 'subPath' is not defined
+***********************************************************************************
+2016-07-05 16:17:45
+68.638999939 seconds
+1.14398333232 minutes
+0.0190663888719 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 227, in <module>
+    stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nManages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\nY\n")
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 16:19:44
+25.3109998703 seconds
+0.421849997838 minutes
+0.00703083329731 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 227, in <module>
+    stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nManages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\nY\n")
+  File "C:\Python27\lib\subprocess.py", line 799, in communicate
+    return self._communicate(input)
+  File "C:\Python27\lib\subprocess.py", line 1051, in _communicate
+    stdout_thread.join()
+  File "C:\Python27\lib\threading.py", line 949, in join
+    self.__block.wait()
+  File "C:\Python27\lib\threading.py", line 340, in wait
+    waiter.acquire()
+KeyboardInterrupt
+***********************************************************************************
+2016-07-05 16:40:32
+63.4240000248 seconds
+1.05706666708 minutes
+0.0176177777847 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 187, in <module>
+    aquTimeReadable = str(time.strftime("%Y-%m-%d %H:%M:%S"))
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-05 16:50:22
+0.18700003624 seconds
+0.00311666727066 minutes
+5.1944454511e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 188, in <module>
+    aquTimeReadable = str(time.strftime(fmt.encode('utf-8'), time.time()).decode('utf-8'))
+TypeError: argument must be 9-item sequence, not float
+***********************************************************************************
+2016-07-05 16:53:00
+61.5850000381 seconds
+1.0264166673 minutes
+0.017106944455 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 184, in <module>
+    filename = file.decode('utf-8')
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-05 17:01:08
+62.5290000439 seconds
+1.04215000073 minutes
+0.0173691666789 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 185, in <module>
+    filename = file.decode('utf-8')
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-06 10:27:51
+92.0559999943 seconds
+1.53426666657 minutes
+0.0255711111095 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 185, in <module>
+    filename = file.decode('utf-8')
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-06 10:37:51
+91.9159998894 seconds
+1.53193333149 minutes
+0.0255322221915 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 185, in <module>
+    filename = file.encode('ISO-8859-1')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0x96 in position 13: ordinal not in range(128)
+***********************************************************************************
+2016-07-06 10:40:20
+1.90299987793 seconds
+0.0317166646322 minutes
+0.000528611077203 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 106, in <module>
+    for series, paths, files in os.walk(os.path.join(triageDir, folder, subfolder)):
+  File "C:\Python27\lib\os.py", line 296, in walk
+    for x in walk(new_path, topdown, onerror, followlinks):
+  File "C:\Python27\lib\os.py", line 278, in walk
+    names = listdir(top)
+KeyboardInterrupt
+***********************************************************************************
+2016-07-06 10:51:17
+90.0080001354 seconds
+1.50013333559 minutes
+0.0250022222598 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 192, in <module>
+    seriesLog.append([subPath, file, aquTimeReadable, hash, aquTime])
+  File "C:\Python27\lib\site-packages\openpyxl\worksheet\worksheet.py", line 686, in append
+    cell = Cell(self, row=row_idx, col_idx=col_idx, value=content)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 113, in __init__
+    self.value = value
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 305, in value
+    self._bind_value(value)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 199, in _bind_value
+    value = self.check_string(value)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 149, in check_string
+    value = unicode(value, self.encoding)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-06 11:00:08
+0.40499997139 seconds
+0.00674999952316 minutes
+0.000112499992053 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 192, in <module>
+    seriesLog.append([subPath.decode('ISO-8859-1'), file.decode('ISO-8859-1'), aquTimeReadable.decode('ISO-8859-1'), hash.decode('ISO-8859-1'), aquTime.decode('ISO-8859-1')])
+AttributeError: 'float' object has no attribute 'decode'
+***********************************************************************************
+2016-07-06 11:08:56
+93.5709998608 seconds
+1.55951666435 minutes
+0.0259919444058 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 192, in <module>
+    seriesLog.append([subPath, file, aquTimeReadable, hash, aquTime])
+  File "C:\Python27\lib\site-packages\openpyxl\worksheet\worksheet.py", line 686, in append
+    cell = Cell(self, row=row_idx, col_idx=col_idx, value=content)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 113, in __init__
+    self.value = value
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 305, in value
+    self._bind_value(value)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 199, in _bind_value
+    value = self.check_string(value)
+  File "C:\Python27\lib\site-packages\openpyxl\cell\cell.py", line 149, in check_string
+    value = unicode(value, self.encoding)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-06 11:15:26
+92.4140000343 seconds
+1.54023333391 minutes
+0.0256705555651 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 192, in <module>
+    filename = file.encode('mbcs')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0x96 in position 13: ordinal not in range(128)
+***********************************************************************************
+2016-07-06 11:23:20
+87.7669999599 seconds
+1.46278333267 minutes
+0.0243797222111 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 190, in <module>
+    filename = file.decode('utf-8')
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-06 11:26:45
+0.43700003624 seconds
+0.00728333393733 minutes
+0.000121388898955 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 199, in <module>
+    seriesLogBook.save(accessionFile)
+  File "C:\Python27\lib\site-packages\openpyxl\workbook\workbook.py", line 263, in save
+    save_workbook(self, filename)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 239, in save_workbook
+    writer.save(filename, as_template=as_template)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 222, in save
+    self.write_data(archive, as_template=as_template)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 80, in write_data
+    self._write_worksheets(archive)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 163, in _write_worksheets
+    xml = sheet._write(self.workbook.shared_strings)
+  File "C:\Python27\lib\site-packages\openpyxl\worksheet\worksheet.py", line 776, in _write
+    return write_worksheet(self, shared_strings)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\worksheet.py", line 195, in write_worksheet
+    props = worksheet.sheet_properties.to_tree()
+  File "C:\Python27\lib\site-packages\openpyxl\descriptors\serialisable.py", line 125, in to_tree
+    node = obj.to_tree(child_tag)
+  File "C:\Python27\lib\site-packages\openpyxl\descriptors\serialisable.py", line 93, in to_tree
+    attrs = dict(self)
+  File "C:\Python27\lib\site-packages\openpyxl\descriptors\serialisable.py", line 135, in __iter__
+    yield attr, safe_string(value)
+  File "C:\Python27\lib\site-packages\openpyxl\compat\strings.py", line 29, in safe_string
+    if isinstance(value, NUMERIC_TYPES):
+KeyboardInterrupt
+***********************************************************************************
+2016-07-06 11:30:49
+0.047000169754 seconds
+0.000783336162567 minutes
+1.30556027095e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 157, in <module>
+    seriesLogBook = load_workbook(accessionFile, False)
+  File "C:\Python27\lib\site-packages\openpyxl\reader\excel.py", line 186, in load_workbook
+    cts = dict(read_content_types(archive))
+  File "C:\Python27\lib\site-packages\openpyxl\reader\workbook.py", line 53, in read_content_types
+    xml_source = archive.read(ARC_CONTENT_TYPES)
+  File "C:\Python27\lib\zipfile.py", line 959, in read
+    return self.open(name, "r", pwd).read()
+  File "C:\Python27\lib\zipfile.py", line 975, in open
+    zinfo = self.getinfo(name)
+  File "C:\Python27\lib\zipfile.py", line 933, in getinfo
+    'There is no item named %r in the archive' % name)
+KeyError: "There is no item named '[Content_Types].xml' in the archive"
+***********************************************************************************
+2016-07-06 11:34:51
+88.3029999733 seconds
+1.47171666622 minutes
+0.0245286111037 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 190, in <module>
+    ilename2 = file.encode('UTF-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0x96 in position 13: ordinal not in range(128)
+***********************************************************************************
+2016-07-06 11:39:58
+109.15199995 seconds
+1.81919999917 minutes
+0.0303199999862 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 196, in <module>
+    simplejson.dump(hashIndex, hashFile)
+  File "C:\Python27\lib\site-packages\simplejson\__init__.py", line 276, in dump
+    for chunk in iterable:
+  File "C:\Python27\lib\site-packages\simplejson\encoder.py", line 655, in _iterencode
+    for chunk in _iterencode_dict(o, _current_indent_level):
+  File "C:\Python27\lib\site-packages\simplejson\encoder.py", line 580, in _iterencode_dict
+    yield _encoder(key)
+  File "C:\Python27\lib\site-packages\simplejson\encoder.py", line 66, in py_encode_basestring_ascii
+    s = s.decode('utf-8')
+  File "C:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0x96 in position 13: invalid start byte
+***********************************************************************************
+2016-07-06 11:51:30
+315.120000124 seconds
+5.25200000207 minutes
+0.0875333333678 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 230, in <module>
+    if len(stderr) > 0:
+TypeError: object of type 'NoneType' has no len()
+***********************************************************************************
+2016-07-06 14:22:29
+0.311999797821 seconds
+0.00519999663035 minutes
+8.66666105058e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 173, in <module>
+    for series, paths, files in os.walk(os.path.join(triageDir, folder).decode("utf-16")):
+  File "C:\Python27\lib\encodings\utf_16.py", line 16, in decode
+    return codecs.utf_16_decode(input, errors, True)
+UnicodeDecodeError: 'utf16' codec can't decode byte 0x73 in position 76: truncated data
+***********************************************************************************
+2016-07-06 14:43:39
+0.0780000686646 seconds
+0.00130000114441 minutes
+2.16666857402e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 173, in <module>
+    for series, paths, files in os.walk(os.path.join(triageDir, folder).decode("utf-16")):
+  File "C:\Python27\lib\encodings\utf_16.py", line 16, in decode
+    return codecs.utf_16_decode(input, errors, True)
+UnicodeDecodeError: 'utf16' codec can't decode byte 0x73 in position 76: truncated data
+***********************************************************************************
+2016-07-06 14:45:05
+0.0780000686646 seconds
+0.00130000114441 minutes
+2.16666857402e-05 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 173, in <module>
+    for series, paths, files in os.walk(os.path.join(triageDir, folder).decode("utf-16-le")):
+  File "C:\Python27\lib\encodings\utf_16_le.py", line 16, in decode
+    return codecs.utf_16_le_decode(input, errors, True)
+UnicodeDecodeError: 'utf16' codec can't decode byte 0x73 in position 76: truncated data
+***********************************************************************************
+2016-07-06 14:48:24
+93.9659998417 seconds
+1.56609999736 minutes
+0.0261016666227 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 176, in <module>
+    print "found " + file
+  File "C:\Python27\lib\encodings\cp437.py", line 12, in encode
+    return codecs.charmap_encode(input,errors,encoding_map)
+UnicodeEncodeError: 'charmap' codec can't encode character u'\u2013' in position 19: character maps to <undefined>
+***********************************************************************************
+2016-07-06 14:59:22
+13.2760000229 seconds
+0.221266667048 minutes
+0.00368777778414 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 193, in <module>
+    shutil.move(filePath, os.path.join(triageDir, "ua200", folder, subPath))
+  File "C:\Python27\lib\shutil.py", line 294, in move
+    os.rename(src, real_dst)
+KeyboardInterrupt
+***********************************************************************************
+2016-07-06 15:05:36
+279.549999952 seconds
+4.65916666587 minutes
+0.0776527777645 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 234, in <module>
+    if len(stderr) > 0:
+TypeError: object of type 'NoneType' has no len()
+***********************************************************************************
+2016-07-06 15:14:52
+279.030999899 seconds
+4.65051666498 minutes
+0.077508611083 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 234, in <module>
+    if len(stderr) > 0:
+TypeError: object of type 'NoneType' has no len()
+***********************************************************************************
+2016-07-06 16:23:03
+290.704999924 seconds
+4.84508333206 minutes
+0.0807513888677 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 234, in <module>
+    if len(stderr) > 0:
+TypeError: object of type 'NoneType' has no len()
+***********************************************************************************
+2016-07-06 16:35:51
+299.654999971 seconds
+4.99424999952 minutes
+0.0832374999921 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 237, in <module>
+    logCopy = os.path.join(presDir, "crawlerLogs", os.path.basename(os.path.dirname(os.path.join(root, log))))
+  File "C:\Python27\lib\ntpath.py", line 66, in join
+    p_drive, p_path = splitdrive(p)
+  File "C:\Python27\lib\ntpath.py", line 115, in splitdrive
+    normp = p.replace(altsep, sep)
+AttributeError: 'list' object has no attribute 'replace'

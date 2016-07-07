@@ -8,6 +8,7 @@ __pycache__/
 
 #specific files
 /pw.txt
+/senate.xlsm
 
 # Distribution / packaging
 .Python
