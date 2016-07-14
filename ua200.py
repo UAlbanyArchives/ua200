@@ -12,6 +12,7 @@ import time
 import datetime
 import smtplib
 from subprocess import Popen, PIPE, STDOUT
+import bagit
 
 
 
@@ -136,14 +137,20 @@ try:
 						
 					seriesLogBook.save(accessionFile)
 					#remove empty directories
-					for root, dirs, files in os.walk(folder, topdown=False):
-						for folder in dirs:
-							if len(os.listdir(os.path.join(root, folder))) == 0:
-								os.rmdir(os.path.join(root, folder))
-					for root, dirs, files in os.walk(folder, topdown=True):
-						for folder in reversed(dirs):
-							if len(os.listdir(os.path.join(root, folder))) == 0:
-								os.rmdir(os.path.join(root, folder))
+					print "clearing " + subfolder
+					emptyCheck = True
+					for folderRoot, subFolders, subFiles in os.walk(subfolder):
+						for fileEx in subfiles:
+							emptyCheck = True
+							raise ValueError("Error: files still present in " + folder)
+					if emptyCheck == True:
+						print subfolder + " is empty"
+						folderName = folder
+						subfolderName = subfolder
+						shutil.rmtree(os.path.join(triageDir, folder, subfolder))
+						os.makedirs(os.path.join(triageDir, folderName, subfolderName))
+											
+					
 					
 		else:
 			print "reading " + folder
@@ -202,14 +209,17 @@ try:
 				
 			seriesLogBook.save(accessionFile)
 			#remove empty directories
-			for root, dirs, files in os.walk(folder, topdown=False):
-				for folder in dirs:
-					if len(os.listdir(os.path.join(root, folder))) == 0:
-						os.rmdir(os.path.join(root, folder))
-			for root, dirs, files in os.walk(folder, topdown=True):
-				for folder in reversed(dirs):
-					if len(os.listdir(os.path.join(root, folder))) == 0:
-						os.rmdir(os.path.join(root, folder))
+			print "clearing " + folder
+			emptyCheck = True
+			for folderRoot, subFolders, subFiles in os.walk(folder):
+				for fileEx in subfiles:
+					emptyCheck = True
+					raise ValueError("Error: files still present in " + folder)
+			if emptyCheck == True:
+				print folder + " is empty"
+				folderName = folder
+				shutil.rmtree(os.path.join(triageDir, folder))
+				os.mkdir(os.path.join(triageDir, folderName))
 		
 	#get file and size count	
 	fileCount = 0
@@ -221,28 +231,56 @@ try:
 			totalSize += os.path.getsize(fp)
 	readableSize = humansize(totalSize)
 	
-	#createSIP
-	print "bagging accession"
-	if os.name == "nt":
-		sipCmd = "python C:\\Projects\\createsip\\createsip.py " + os.path.join(triageDir, "ua200")
-	else:
-		sipCmd = "sudo python /home/bcadmin/Projects/createSIP/createSIP.py " + os.path.join(triageDir, "ua200")
-	createSIP = Popen(sipCmd, stdout=PIPE, stdin=PIPE, stderr=STDOUT)
-	stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nSecretary, Manages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\nY\n")
-	if len(stdout) > 0:
-		raise ValueError(stdout)
+	if fileCount > 0:
+	
+		#createSIP
+		print "bagging accession"
+		if os.name == "nt":
+			sipCmd = "python C:\\Projects\\createsip\\createsip.py " + os.path.join(triageDir, "ua200")
+		else:
+			sipCmd = "sudo python /home/bcadmin/Projects/createSIP/createSIP.py " + os.path.join(triageDir, "ua200")
+		createSIP = Popen(sipCmd, stdout=PIPE, stdin=PIPE, stderr=STDOUT)
+		stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nSecretary, Manages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\nY\n")
+		SIP = str(stdout).split('|||')[1].strip()
 		
-	#make copy of logs
-	for root, dirs, logs in os.walk(logDir.decode(sys.getfilesystemencoding())):
-		for log in logs:
-			print os.path.basename(os.path.dirname(os.path.join(root, log)))
-			logCopy = os.path.join(presDir, "crawlerLogs", os.path.basename(os.path.dirname(os.path.join(root, log))))
-			shutil.copy(os.path.join(root, log), logCopy)
+		#validate bag
+		print "validating bag"
+		bagValid = False
+		bagCheck = bagit.Bag(SIP)
+		if bagCheck.is_valid():
+			bagValid = True
+			print "bag is valid!"
+		else:
+			bagValid = False
+			print "bag failed to validate"
+			print os.name
+			
+			
+		#make copy of logs
+		print "making copies of logs"
+		for logFile in os.listdir(logDir.decode(sys.getfilesystemencoding())):
+			print logFile
+			if os.path.isfile(os.path.join(logDir, logFile)):
+				logCopy = os.path.join(presDir, "crawlerLogs", os.path.basename(logFile))
+				shutil.copy(os.path.join(logDir, logFile), logCopy)
+			else:
+				if not os.path.isdir(os.path.join(presDir, "crawlerLogs", logFile)):
+					os.makedirs(os.path.join(presDir, "crawlerLogs", logFile))
+				for logSubFile in os.listdir(os.path.join(logDir, logfile).decode(sys.getfilesystemencoding())):
+					logCopy = os.path.join(presDir, "crawlerLogs", logFile, os.path.basename(logSubFile))
+					shutil.copy(os.path.join(logDir, logFile, logSubFile), logCopy)
+					
+	else:
+		print "no new files found"
 			
 	finalTime = time.time() - startTime
 	print "Total Time: " + str(finalTime) + " seconds, " + str(finalTime/60) + " minutes, " + str(finalTime/3600) + " hours"
 	finalTimeFile = open("log.txt", "a")
 	logText = "\nSuccessful Crawl ran " + str(time.strftime("%Y-%m-%d %H:%M:%S"))
+	if bagValid == True:
+		logText = logText + "\nBag is Valid!"
+	else:
+		logText = logText + "\nBag failed to validate."
 	logText = logText + "\nProcess took " + str(finalTime) + " seconds or " + str(finalTime/60) + " minutes or " + str(finalTime/3600) + " hours"
 	logText = logText + "\n" + str(fileCount) + " files transferred."
 	logText = logText + "\n" + str(totalSize) + " bytes or " + str(readableSize) + " transferred."
