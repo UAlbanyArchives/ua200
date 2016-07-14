@@ -266,7 +266,7 @@ try:
 			else:
 				if not os.path.isdir(os.path.join(presDir, "crawlerLogs", logFile)):
 					os.makedirs(os.path.join(presDir, "crawlerLogs", logFile))
-				for logSubFile in os.listdir(os.path.join(logDir, logfile).decode(sys.getfilesystemencoding())):
+				for logSubFile in os.listdir(os.path.join(logDir, logFile).decode(sys.getfilesystemencoding())):
 					logCopy = os.path.join(presDir, "crawlerLogs", logFile, os.path.basename(logSubFile))
 					shutil.copy(os.path.join(logDir, logFile, logSubFile), logCopy)
 					
