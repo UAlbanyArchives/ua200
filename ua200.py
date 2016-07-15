@@ -231,6 +231,7 @@ try:
 			totalSize += os.path.getsize(fp)
 	readableSize = humansize(totalSize)
 	
+	bagValid = False
 	if fileCount > 0:
 	
 		#createSIP
@@ -245,6 +246,7 @@ try:
 		
 		#validate bag
 		print "validating bag"
+		print "Bag path: " + str(SIP)
 		bagValid = False
 		bagCheck = bagit.Bag(SIP)
 		if bagCheck.is_valid():

@@ -4276,3 +4276,59 @@ Traceback (most recent call last):
   File "C:\Python27\lib\os.py", line 157, in makedirs
     mkdir(name, mode)
 WindowsError: [Error 183] Cannot create a file when that file already exists: u'\\\\LINCOLN\\Masters\\Special Collections\\accessions\\crawlerLogs\\Bylaws, Charters, and Senate Handbooks.xlsx'
+***********************************************************************************
+2016-07-14 17:11:43
+901.029999971 seconds
+15.0171666662 minutes
+0.250286111103 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 269, in <module>
+    for logSubFile in os.listdir(os.path.join(logDir, logfile).decode(sys.getfilesystemencoding())):
+NameError: name 'logfile' is not defined
+***********************************************************************************
+2016-07-15 11:58:01
+3.71600008011 seconds
+0.0619333346685 minutes
+0.00103222224447 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 280, in <module>
+    if bagValid == True:
+NameError: name 'bagValid' is not defined
+***********************************************************************************
+2016-07-15 12:36:27
+196.273999929 seconds
+3.27123333216 minutes
+0.054520555536 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 251, in <module>
+    if bagCheck.is_valid():
+  File "C:\Python27\lib\site-packages\bagit.py", line 381, in is_valid
+    self.validate(fast=fast)
+  File "C:\Python27\lib\site-packages\bagit.py", line 373, in validate
+    self._validate_contents(processes=processes, fast=fast)
+  File "C:\Python27\lib\site-packages\bagit.py", line 450, in _validate_contents
+    self._validate_oxum()    # Fast
+  File "C:\Python27\lib\site-packages\bagit.py", line 475, in _validate_oxum
+    total_bytes += os.stat(payload_file).st_size
+WindowsError: [Error 3] The system cannot find the path specified: '\\\\LINCOLN\\Masters\\Special Collections\\accessions\\SIP\\ua200-MCxK2wb3SdmeTbVWZcmMcd\\data\\ua200\\Bylaws, Charters, and Senate Handbooks\\2012-13 Charter (and older)\\2011 Combined Index Faculty Bylaws_Chair S. Fessler\\COMBINED INDEX[1] with Fessler comments ver2.docx'
+***********************************************************************************
+2016-07-15 12:59:04
+13.1689999104 seconds
+0.219483331839 minutes
+0.00365805553065 hours
+Traceback:
+Traceback (most recent call last):
+  File "ua200.py", line 210, in <module>
+    seriesLogBook.save(accessionFile)
+  File "C:\Python27\lib\site-packages\openpyxl\workbook\workbook.py", line 263, in save
+    save_workbook(self, filename)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 239, in save_workbook
+    writer.save(filename, as_template=as_template)
+  File "C:\Python27\lib\site-packages\openpyxl\writer\excel.py", line 221, in save
+    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
+  File "C:\Python27\lib\zipfile.py", line 778, in __init__
+    self.fp = io.open(file, filemode)
+IOError: [Errno 13] Permission denied: '\\\\romeo\\Collect\\spe\\Greg\\ua200_testing\\Logs\\Plenaries.xlsx'
