@@ -15,9 +15,6 @@ from subprocess import Popen, PIPE, STDOUT
 import bagit
 
 
-
-
-
 startTime = time.time()
 startTimeReadable = str(datetime.datetime.now().isoformat())
 print startTimeReadable
@@ -32,13 +29,11 @@ startLog.close()
 try:
 
 	if os.name == "nt":
-		#triageDir = "\\\\LINCOLN\\Library\\UA200"
-		triageDir = "\\\\romeo\\Collect\\spe\\Greg\\ua200_testing"
+		triageDir = "\\\\LINCOLN\\Library\\UA200"
 		presDir = "\\\\LINCOLN\\Masters\\Special Collections\\accessions"
 		createSIPDir = ""
 	else:
-		#triageDir = "/media/bcadmin/Lincoln/Library/UA200"
-		triageDir = "/media/bcadmin/Collect/spe/Greg/ua200_testing"
+		triageDir = "/media/bcadmin/Triage/UA200"
 		presDir = "/media/bcadmin/Lincoln/Special Collections/accessions"
 		createSIPDir = ""
 		
@@ -239,7 +234,7 @@ try:
 		if os.name == "nt":
 			sipCmd = "python C:\\Projects\\createsip\\createsip.py " + os.path.join(triageDir, "ua200")
 		else:
-			sipCmd = "sudo python /home/bcadmin/Projects/createSIP/createSIP.py " + os.path.join(triageDir, "ua200")
+			sipCmd = ["sudo", "python", "/home/bcadmin/Projects/createSIP/createSIP.py", os.path.join(triageDir, "ua200")]
 		createSIP = Popen(sipCmd, stdout=PIPE, stdin=PIPE, stderr=STDOUT)
 		stdout, stderr = createSIP.communicate("ua200\nElisa Lopez\nRecords from the University Senate\n\nua200.py crawler\n\nUniversity Senate\nSecretary, Manages Senate Records\nemlopez@albany.edu\nUNH 302\n\n\n\n\nY\n")
 		SIP = str(stdout).split('|||')[1].strip()
@@ -261,16 +256,19 @@ try:
 		#make copy of logs
 		print "making copies of logs"
 		for logFile in os.listdir(logDir.decode(sys.getfilesystemencoding())):
-			print logFile
 			if os.path.isfile(os.path.join(logDir, logFile)):
 				logCopy = os.path.join(presDir, "crawlerLogs", os.path.basename(logFile))
-				shutil.copy(os.path.join(logDir, logFile), logCopy)
+				if os.path.isfile(logCopy):
+					os.remove(logCopy)
+				shutil.copyfile(os.path.join(logDir, logFile), logCopy)
 			else:
 				if not os.path.isdir(os.path.join(presDir, "crawlerLogs", logFile)):
 					os.makedirs(os.path.join(presDir, "crawlerLogs", logFile))
 				for logSubFile in os.listdir(os.path.join(logDir, logFile).decode(sys.getfilesystemencoding())):
 					logCopy = os.path.join(presDir, "crawlerLogs", logFile, os.path.basename(logSubFile))
-					shutil.copy(os.path.join(logDir, logFile, logSubFile), logCopy)
+					if os.path.isfile(logCopy):
+						os.remove(logCopy)
+					shutil.copyfile(os.path.join(logDir, logFile, logSubFile), logCopy)
 					
 	else:
 		print "no new files found"
